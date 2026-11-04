@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>appstudy — sample rebuild brief preview</title>
+<style>
+  :root { --bg: #ffffff; --fg: #111827; --muted: #6b7280; --card: #f9fafb;
+          --line: #e5e7eb; --accent: #4f46e5; --code-bg: #111827; --code-fg: #e5e7eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0d1117; --fg: #e6edf3; --muted: #8b949e; --card: #161b22;
+            --line: #30363d; --accent: #818cf8; --code-bg: #161b22; --code-fg: #e6edf3; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, system-ui, -apple-system, sans-serif;
+         background: var(--bg); color: var(--fg); line-height: 1.6; }
+  header { padding: 48px 24px 8px; max-width: 860px; margin: 0 auto; }
+  header p.eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .08em;
+                     text-transform: uppercase; font-size: 13px; margin: 0 0 8px; }
+  h1 { margin: 0 0 8px; font-size: 34px; line-height: 1.2; }
+  header p.sub { color: var(--muted); margin: 0; }
+  main { max-width: 860px; margin: 0 auto; padding: 24px; }
+  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 32px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 12px 18px; }
+  .stat b { display: block; font-size: 22px; }
+  .stat span { color: var(--muted); font-size: 13px; }
+  h2 { font-size: 22px; margin-top: 36px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+         padding: 1px 6px; font-size: 14px; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+          padding: 4px 14px; font-size: 14px; }
+  .swatch { display: inline-block; width: 18px; height: 18px; border-radius: 5px;
+            vertical-align: -3px; margin-right: 6px; border: 1px solid var(--line); }
+  pre { background: var(--code-bg); color: var(--code-fg); border-radius: 12px;
+        padding: 16px 20px; overflow-x: auto; font-size: 14px; }
+  footer { max-width: 860px; margin: 0 auto; padding: 8px 24px 48px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">appstudy · sample rebuild brief</p>
+  <h1>Rebuild brief: acme-notes.example</h1>
+  <p class="sub">Clean-room brief generated from the site's public, visible surface only.
+  It describes what a visitor sees — never copied code, never anything behind a login.</p>
+</header>
+<main>
+  <div class="stats">
+    <div class="stat"><b>3</b><span>pages studied</span></div>
+    <div class="stat"><b>2</b><span>forms found</span></div>
+    <div class="stat"><b>6</b><span>calls to action</span></div>
+    <div class="stat"><b>4</b><span>colours observed</span></div>
+  </div>
+
+  <h2>Sitemap</h2>
+  <p><code>/</code> · <code>/pricing</code> · <code>/docs</code></p>
+
+  <h2>Page inventory</h2>
+  <table>
+    <tr><th>Path</th><th>Type</th><th>Title</th><th>Images</th></tr>
+    <tr><td><code>/</code></td><td>landing</td><td>Acme Notes — Capture ideas fast</td><td>1</td></tr>
+    <tr><td><code>/pricing</code></td><td>pricing</td><td>Acme Notes — Pricing</td><td>0</td></tr>
+    <tr><td><code>/docs</code></td><td>docs</td><td>Acme Notes — Documentation</td><td>0</td></tr>
+  </table>
+
+  <h2>Design tokens (observed)</h2>
+  <p>
+    <span class="swatch" style="background:#111827"></span><code>#111827</code>&nbsp;
+    <span class="swatch" style="background:#ffffff"></span><code>#ffffff</code>&nbsp;
+    <span class="swatch" style="background:#4f46e5"></span><code>#4f46e5</code>&nbsp;
+    <span class="swatch" style="background:#f9fafb"></span><code>#f9fafb</code>
+  </p>
+  <p>Font stack: <code>Inter, system-ui, sans-serif</code></p>
+
+  <h2>Calls to action</h2>
+  <div class="chips">
+    <span class="chip">Get started free</span>
+    <span class="chip">Watch the demo</span>
+    <span class="chip">Create account</span>
+    <span class="chip">Start free</span>
+    <span class="chip">Go Pro</span>
+    <span class="chip">Continue</span>
+  </div>
+
+  <h2>Forms to rebuild</h2>
+  <h3>/ — POST → /signup</h3>
+  <ul>
+    <li>input <code>email</code> (email) — “Work email” <em>(required)</em></li>
+    <li>input <code>plan</code> (hidden)</li>
+  </ul>
+
+  <h2>Try it yourself</h2>
+  <pre><code>$ python3 -m appstudy study https://example.com --depth 2 --out appstudy-output
+Studied 3 page(s).
+Brief:  appstudy-output/brief.md
+Data:   appstudy-output/site.json</code></pre>
+</main>
+<footer>
+  This is a static preview of what an appstudy brief looks like. The real output is
+  <code>brief.md</code> + <code>site.json</code> — see <code>examples/sample-brief.md</code> in the repo.
+</footer>
+</body>
+</html>

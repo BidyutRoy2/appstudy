@@ -1,0 +1,143 @@
+{
+  "root_url": "examples/sample-site",
+  "pages": [
+    {
+      "path": "/docs",
+      "title": "Acme Notes — Docs",
+      "description": "",
+      "type": "docs",
+      "headings": [
+        "Documentation",
+        "Getting started"
+      ],
+      "forms": 0,
+      "images": 0,
+      "text_length": 55
+    },
+    {
+      "path": "/",
+      "title": "Acme Notes — Capture ideas fast",
+      "description": "A tiny notes app for fast thinkers.",
+      "type": "landing",
+      "headings": [
+        "Capture ideas fast",
+        "Your second brain, minus the clutter"
+      ],
+      "forms": 1,
+      "images": 1,
+      "text_length": 47
+    },
+    {
+      "path": "/pricing",
+      "title": "Acme Notes — Pricing",
+      "description": "",
+      "type": "pricing",
+      "headings": [
+        "Simple pricing",
+        "Free forever, Pro when you need it"
+      ],
+      "forms": 1,
+      "images": 0,
+      "text_length": 22
+    }
+  ],
+  "sitemap": [
+    "/",
+    "/docs",
+    "/pricing"
+  ],
+  "nav": [
+    "/",
+    "/pricing.html",
+    "/docs.html"
+  ],
+  "shared_components": [
+    "site navigation"
+  ],
+  "forms": [
+    {
+      "page": "/",
+      "action": "file:///signup",
+      "method": "post",
+      "fields": [
+        {
+          "kind": "input",
+          "name": "email",
+          "type": "email",
+          "label": "Work email",
+          "required": true
+        },
+        {
+          "kind": "input",
+          "name": "plan",
+          "type": "hidden",
+          "label": "",
+          "required": false
+        },
+        {
+          "kind": "button",
+          "name": "",
+          "type": "submit",
+          "label": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "page": "/pricing",
+      "action": "file:///checkout",
+      "method": "post",
+      "fields": [
+        {
+          "kind": "select",
+          "name": "plan",
+          "type": "select",
+          "label": "Choose a plan",
+          "required": true
+        },
+        {
+          "kind": "button",
+          "name": "",
+          "type": "submit",
+          "label": "",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "calls_to_action": [
+    "Get started free",
+    "Watch the demo",
+    "Create account",
+    "Start free",
+    "Go Pro",
+    "Continue"
+  ],
+  "colors": [
+    {
+      "color": "#111827",
+      "pages": 1
+    },
+    {
+      "color": "#ffffff",
+      "pages": 1
+    },
+    {
+      "color": "#4f46e5",
+      "pages": 1
+    },
+    {
+      "color": "#f9fafb",
+      "pages": 1
+    }
+  ],
+  "fonts": [
+    "Inter, system-ui, sans-serif"
+  ],
+  "page_types": {
+    "docs": 1,
+    "landing": 1,
+    "pricing": 1
+  },
+  "total_pages": 3
+}

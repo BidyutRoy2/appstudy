@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "appstudy"
+version = "0.1.0"
+description = "Study how any website works from its public surface, then rebuild it yourself — clean-room, zero dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Bidyut Roy" }]
+keywords = ["clean-room", "reverse-engineering", "website-analysis", "rebuild", "cli", "crawler"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Documentation",
+]
+
+[project.scripts]
+appstudy = "appstudy.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

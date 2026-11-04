@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Acme Notes — Pricing</title></head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/pricing.html">Pricing</a>
+    <a href="/docs.html">Docs</a>
+  </nav>
+  <main>
+    <h1>Simple pricing</h1>
+    <h2>Free forever, Pro when you need it</h2>
+    <button>Start free</button>
+    <button>Go Pro</button>
+    <form action="/checkout" method="post">
+      <label for="plan">Choose a plan</label>
+      <select id="plan" name="plan" required>
+        <option value="free">Free</option>
+        <option value="pro">Pro</option>
+      </select>
+      <button type="submit">Continue</button>
+    </form>
+  </main>
+</body>
+</html>
